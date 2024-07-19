@@ -3,12 +3,18 @@
       ""
     ],
     "alloworiginregexp":[
-      "http://localhost:.*"
+      "http://localhost:.*",
+      "https://20092-cfpreview-prod.adobeio-static.net",
+      "https://main--securbank-www--chis-adobe.hlx.page",
+      "https://main--securbank-www--chis-adobe.hlx.live",
+      "https://main--securbank-aem-ue--chis-adobe.hlx.page",
+      "https://main--securbank-aem-ue--chis-adobe.hlx.live"
     ],
     "allowedpaths": [
       "/graphql/execute.json.*",
       "/content/_cq_graphql/wknd-shared/endpoint.json",
-      "/content/experience-fragments/.*"
+      "/content/experience-fragments/.*",
+      ".*"
     ],
     "supportedheaders": [
       "Origin",
@@ -22,7 +28,8 @@
     "supportedmethods":[
       "GET",
       "HEAD",
-      "POST"
+      "POST",
+      "OPTIONS"
     ],
     "maxage:Integer": 1800,
     "supportscredentials": true,
