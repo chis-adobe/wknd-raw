@@ -18,7 +18,8 @@
     "allowedpaths": [
       "/graphql/execute.json.*",
       "/content/_cq_graphql/wknd-shared/endpoint.json",
-      "/content/experience-fragments/.*"
+      "/content/experience-fragments/.*",
+      ".*"
     ],
     "supportedheaders":[
       "Origin",
@@ -35,9 +36,10 @@
     "supportedmethods":[
       "GET",
       "HEAD",
-      "POST"
+      "POST",
+      "OPTIONS"
     ],
     "maxage:Integer": 1800,
-    "supportscredentials": false,
+    "supportscredentials": true,
     "exposedheaders":[ "" ]
 }
