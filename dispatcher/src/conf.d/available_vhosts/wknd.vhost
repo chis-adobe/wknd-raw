@@ -39,8 +39,10 @@ Include conf.d/variables/custom.vars
 
         SetEnvIfExpr "req_novary('Access-Control-Request-Method') == '' && %{REQUEST_METHOD} == 'OPTIONS' && req_novary('Origin') != ''" CORSType=invalidpreflight CORSProcessing=false
         SetEnvIfExpr "req_novary('Access-Control-Request-Method') != '' && %{REQUEST_METHOD} == 'OPTIONS' && req_novary('Origin') != ''" CORSType=preflight CORSProcessing=true CORSTrusted=false
-        SetEnvIfExpr "req_novary('Origin') -strcmatch 'https://%{HTTP_HOST}*'" CORSType=samedomain CORSProcessing=false CORSTrusted=true
-        SetEnvIfExpr "req_novary('Origin') -strcmatch 'http://%{HTTP_HOST}*'" CORSType=samedomain CORSProcessing=false CORSTrusted=true
+        SetEnvIfExpr "req_novary('Origin') -strcmatch 'https://main--securbank-aem-ue--chis-adobe.hlx.page/'" CORSType=samedomain CORSProcessing=false CORSTrusted=true
+        SetEnvIfExpr "req_novary('Origin') -strcmatch 'http://main--securbank-aem-ue--chis-adobe.hlx.page/'" CORSType=samedomain CORSProcessing=false CORSTrusted=true
+        SetEnvIfExpr "req_novary('Origin') -strcmatch 'https://main--securbank-aem-ue--chis-adobe.live.page/'" CORSType=samedomain CORSProcessing=false CORSTrusted=true
+        SetEnvIfExpr "req_novary('Origin') -strcmatch 'http://main--securbank-aem-ue--chis-adobe.live.page/'" CORSType=samedomain CORSProcessing=false CORSTrusted=true
 
         # For requests that require CORS processing, check if the Origin can be trusted
         SetEnvIfExpr "%{HTTP_HOST} =~ /(.*)/ " ParsedHost=$1
