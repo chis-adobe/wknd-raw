@@ -1,25 +1,36 @@
-// This OSGi configuration is to support local development on the AEM SDK. 
-// The Dispatcher CORS configuration should be used when deploying to AEM as a Cloud Service.
-// See https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html
 {
     "alloworigin":[
       ""
     ],
     "alloworiginregexp":[
-      "http://localhost:.*"
+      "http://localhost:.*",
+      "https://experience.adobe.com",
+      "https://securbank-react.vercel.app",
+      "https://20092-cfpreview-stage.adobeio-static.net",
+      "https://20092-cfpreview-prod.adobeio-static.net",
+      "https://main--securbank-www--chis-adobe.hlx.page",
+      "https://main--securbank-www--chis-adobe.hlx.live",
+      "https://main--securbank-aem-ue--chis-adobe.hlx.page",
+      "https://main--securbank-aem-ue--chis-adobe.hlx.live",
+      "https://www.securbankdemo.com",
+      "https://author-p138110-e1400617.adobeaemcloud.com"
     ],
     "allowedpaths": [
       "/graphql/execute.json.*",
       "/content/_cq_graphql/wknd-shared/endpoint.json",
       "/content/experience-fragments/.*"
     ],
-    "supportedheaders": [
+    "supportedheaders":[
       "Origin",
       "Accept",
       "X-Requested-With",
       "Content-Type",
+      "content-type",
       "Access-Control-Request-Method",
-      "Access-Control-Request-Headers"
+      "Access-Control-Request-Headers",
+      "Access-Control-Request-Origin",
+      "Access-Control-Allow-Origin",
+      "Authorization"
     ],
     "supportedmethods":[
       "GET",
