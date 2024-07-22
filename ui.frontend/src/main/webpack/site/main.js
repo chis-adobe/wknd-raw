@@ -4,6 +4,7 @@ import './main.scss';
 // Typescript/Javascript
 import './util.js';
 import './scroll-indicator';
+import '../components/ac-overlay/ac-overlay.js';
 import '../components/languagenavigation/languagenavigation.js';
 import '../components/layout-container/modal.js';
 import '../components/navigation/navigation.js';

@@ -9,6 +9,10 @@ if (document.readyState !== 'loading') {
 function showPanel() {
   const panel = document.querySelector(".ac-overlay .cmp-contentfragment");
 
+  if(!panel) {
+    return;
+  }
+  
   panel.addEventListener('animationend', function() {
       panel.classList.remove('hidden');
       panel.classList.add('visible');

@@ -1,10 +1,10 @@
-$border-radius: 12px;
+$border-radius: 0px;
 $background-color: white;
 
 .td-offer .cmp-contentfragment {
   width: auto;
-  max-width: 500px;
-  height: 200px;
+  max-width: 800px;
+  height: auto;
   background-color: $background-color;
   border-radius: $border-radius;
 
@@ -16,9 +16,10 @@ $background-color: white;
 
   img {
     top: 0;
-    width: 50%;
+    width: 40%;
     object-fit: cover;
     border-radius: $border-radius;
+    margin-bottom: 50px;
   }
 
   &__elements {
@@ -36,10 +37,6 @@ $background-color: white;
       font-weight: normal;
       font-size: 15px;
     }
-
-    img {
-      width: 50%;
-    }
   }
 
   &__element {
@@ -48,9 +45,20 @@ $background-color: white;
     }
 
     &--headline {
-      width: 30%;
+      width: 40%;
       border: 5px green solid;
       margin: 20px;
+
+      .cmp-contentfragment__element-value {
+        font-size: 25px;
+        font-weight: bold;
+      }
+    }
+
+    &--detail .cmp-contentfragment__element-value {
+      font-size: 18px;
+      font-weight: lighter;
+      color: grey;
     }
 
     &--pretitle {
@@ -94,18 +102,5 @@ $background-color: white;
 
   dt {
     display: none;
-  }
-}
-
-@keyframes slide-in {
-  from {
-      transform: translateX(100%); /* Start off-screen to the right */
-      visibility: hidden;
-      opacity: 0;
-  }
-  to {
-      transform: translateX(0); /* Final position */
-      visibility: visible;
-      opacity: 1;
   }
 }
