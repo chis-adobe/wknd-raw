@@ -50,8 +50,8 @@ Include conf.d/variables/custom.vars
         SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.hlx\.page$)#" CORSTrusted=true
         SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.hlx\.page\/\.*)#" CORSTrusted=true
 
-        SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.live\.page$)#" CORSTrusted=true
-        SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.live\.page\/\.*)#" CORSTrusted=true
+        SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.hlx\.live$)#" CORSTrusted=true
+        SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.hlx\.live\/\.*)#" CORSTrusted=true
 
         ################## The following provide access from common developer platforms, to accelerate AEM Headless access to WKND content.
         # Developer Localhost
