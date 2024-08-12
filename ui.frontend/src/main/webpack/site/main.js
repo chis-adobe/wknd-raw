@@ -5,6 +5,7 @@ import './main.scss';
 import './util.js';
 import './scroll-indicator';
 import '../components/ac-overlay/ac-overlay.js';
+import '../components/delta-offer/delta-offer.js';
 import '../components/languagenavigation/languagenavigation.js';
 import '../components/layout-container/modal.js';
 import '../components/navigation/navigation.js';

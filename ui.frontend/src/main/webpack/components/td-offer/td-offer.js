@@ -9,6 +9,10 @@ if (document.readyState !== 'loading') {
 function showPanel() {
   const panel = document.querySelector(".td-offer .cmp-contentfragment");
 
+  if(!panel) {
+    return;
+  }
+
   const elements = panel.querySelector(".cmp-contentfragment__elements");
   const headlineEl = elements.querySelector(".cmp-contentfragment__element--headline");
   const detailEl = elements.querySelector(".cmp-contentfragment__element--detail");
